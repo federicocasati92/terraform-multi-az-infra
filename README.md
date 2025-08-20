@@ -4,7 +4,7 @@ This repository contains a fully featured, high-availability AWS VPC infrastruct
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 project-root/
 │
@@ -18,13 +18,11 @@ project-root/
 ├── security.tf # Security groups and firewall rules
 └── resources.tf # EC2 instances, RDS, Load Balancer, etc.
 
-markdown
-Copia
-Modifica
+
 
 ---
 
-## 🚀 Features
+ # Features
 
 - Custom VPC with public and private subnets across **two Availability Zones** (e.g., us-east-1a & us-east-1b)
 - Internet Gateway and dual NAT Gateways for high availability
@@ -45,7 +43,7 @@ Modifica
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 - [Terraform CLI](https://www.terraform.io/downloads) ≥ 1.3
 - AWS CLI configured with IAM credentials (`aws configure`)
@@ -54,36 +52,30 @@ Modifica
 
 ---
 
-## 🔧 How to Deploy
+##  How to Deploy
 
 ### 1️⃣ Deploy the Remote Backend (once)
 
-```bash
+``
 cd terraform-backend-setup/
 terraform init
 terraform apply
 This will create the S3 bucket and DynamoDB table used to store and lock the Terraform state.
 
 2️⃣ Deploy the Main Infrastructure
-bash
-Copia
-Modifica
+
 cd ../terraform_vpc_project/
 terraform init        # Connects to the remote backend
 terraform plan        # Review execution plan
 terraform apply       # Deploy infrastructure
 💡 Note: Update your public IP in security.tf to restrict SSH access to the Bastion Host:
 
-hcl
-Copia
-Modifica
+
 cidr_blocks = ["YOUR.PUBLIC.IP/32"]
 📤 Outputs
 Optional outputs can be defined in outputs.tf, e.g.:
 
-h
-Copia
-Modifica
+
 output "vpc_id" {
   value = aws_vpc.main.id
 }
