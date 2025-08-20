@@ -33,7 +33,11 @@ project-root/
 - **SSH access** via Bastion Host to private EC2 instances
 - **RDS (MySQL)** hosted in private subnets
 
-# Testing and Validation
+# Infrastructure & Contributions
+
+“Infrastructure as Code implemented using Terraform with guidance; VPC, subnets, security groups, and high-availability architecture fully designed and configured.”
+
+## Testing and Validation
 
 For detailed testing instructions including SSH access, ALB routing, autoscaling, and RDS connectivity, see [test.md](test.md).  
 
