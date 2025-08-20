@@ -37,7 +37,14 @@ project-root/
 - **SSH access** via Bastion Host to private EC2 instances
 - **RDS (MySQL)** hosted in private subnets
 
----
+# Testing and Validation
+
+For detailed testing instructions including SSH access, ALB routing, autoscaling, and RDS connectivity, see [test.md](test.md).  
+
+## 📸 Architecture Diagram
+
+Refer to [architecture-diagram.png](architecture-diagram.png) for a visual overview of the infrastructure.
+
 
 ##  Prerequisites
 
