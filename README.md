@@ -7,18 +7,14 @@ This repository contains a fully featured, high-availability AWS VPC infrastruct
 ##  Project Structure
 
 project-root/
-│
-├── terraform-backend-setup/ # Only for backend configuration (S3 + DynamoDB)
-│ └── main.tf # Defines S3 bucket and DynamoDB table for remote state
-│
-└── terraform_vpc_project/ # Main infrastructure code
-├── backend-config.tf # Terraform backend configuration
-├── main.tf # Base VPC and general resources
-├── subnet.tf # Public and private subnet definitions
-├── security.tf # Security groups and firewall rules
-└── resources.tf # EC2 instances, RDS, Load Balancer, etc.
-
-
+- terraform-backend-setup/
+  - main.tf       # backend config (S3 + DynamoDB)
+- terraform_vpc_project/
+  - backend-config.tf
+  - main.tf
+  - subnet.tf
+  - security.tf
+  - resources.tf
 
 ---
 
