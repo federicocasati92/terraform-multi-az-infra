@@ -43,7 +43,7 @@ For detailed testing instructions including SSH access, ALB routing, autoscaling
 
 ## 📸 Architecture Diagram
 
-Refer to [architecture-diagram.png](architecture-diagram.png) for a visual overview of the infrastructure.
+![Infrastructure Architecture](architecture-diagram.png)
 
 
 ##  Prerequisites
