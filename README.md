@@ -66,7 +66,8 @@ terraform apply
 This will create the S3 bucket and DynamoDB table used to store and lock the Terraform state.
 
 2️⃣ Deploy the Main Infrastructure
-
+```markdown
+```bash
 cd ../terraform_vpc_project/
 terraform init        # Connects to the remote backend
 terraform plan        # Review execution plan
