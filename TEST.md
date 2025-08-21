@@ -1,5 +1,7 @@
 # Tests and Validation
 
+This section documents the validation steps I performed to test the AWS VPC infrastructure deployed with Terraform.
+
 ### 1️⃣ SSH Access via Bastion Host (Jump Host)
 
 * Ensure your private key is loaded into your SSH agent to simplify SSH access:
@@ -62,8 +64,6 @@ aws ec2 describe-instances \
   --query "Reservations[].Instances[].PrivateIpAddress" \
   --output text
 ```
-
----
 
 ### 3️⃣ Network Connectivity Tests
 
