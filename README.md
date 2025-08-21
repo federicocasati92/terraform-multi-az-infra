@@ -62,7 +62,7 @@ terraform apply
 ```
 This will create the S3 bucket and DynamoDB table used to store and lock the Terraform state.
 
-2️⃣ Deploy the Main Infrastructure
+### 2️⃣ Deploy the Main Infrastructure
 ```bash
 cd ../terraform_vpc_project/
 terraform init        # Connects to the remote backend
@@ -73,7 +73,7 @@ terraform apply       # Deploy infrastructure
 
 
 cidr_blocks = ["YOUR.PUBLIC.IP/32"]
- Outputs
+ # Outputs
 Optional outputs can be defined in outputs.tf, e.g.:
 
 ```hcl
