@@ -69,11 +69,11 @@ terraform init        # Connects to the remote backend
 terraform plan        # Review execution plan
 terraform apply       # Deploy infrastructure
 ```
-💡 Note: Update your public IP in security.tf to restrict SSH access to the Bastion Host:
+ Note: Update your public IP in security.tf to restrict SSH access to the Bastion Host:
 
 
 cidr_blocks = ["YOUR.PUBLIC.IP/32"]
-📤 Outputs
+ Outputs
 Optional outputs can be defined in outputs.tf, e.g.:
 
 ```hcl
@@ -85,8 +85,8 @@ output "public_subnet_ids" {
   value = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]
 }
 ```
-📜 License
+ License
 This project is licensed under the MIT License. Feel free to use, modify, and share.
 
-📬 Contact
+ Contact
 For questions, suggestions, or issues, open an issue or pull request on this repository.
