@@ -54,7 +54,7 @@ aws ec2 describe-instances \
 * Get private IPs of EC2 instances inside the ASG:
 
 ```bash
-ASG_NAME="your-asg-name"
+ASG_NAME="ASG-EC2"
 
 INSTANCE_IDS=$(aws autoscaling describe-auto-scaling-groups \
   --auto-scaling-group-names $ASG_NAME \
