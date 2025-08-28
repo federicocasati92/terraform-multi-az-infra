@@ -84,13 +84,13 @@ ping -c 4 google.com
 * You can verify the load balancer forwards traffic and distributes requests to healthy instances by curling the ALB DNS name:
 
 ```bash
-# 4️⃣ Ottieni il DNS dell'ALB
+#  Get ALB's DNS
 ALB_DNS=$(aws elbv2 describe-load-balancers \
   --names "my-app-lb" \
   --query "LoadBalancers[0].DNSName" \
   --output text)
 
-# 5️⃣ Test HTTP al Load Balancer
+#  HTTP Test to Load Balancer
 curl http://$ALB_DNS
 ```
 
