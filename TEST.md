@@ -45,8 +45,10 @@ ssh ec2-private-2
 * Get the public IP of the bastion host (via AWS CLI or console):
 
 ```bash
-aws ec2 describe-instances --filters "Name=tag:Name,Values=BastionHost" \
-  --query "Reservations[0].Instances[0].PublicIpAddress" --output text
+aws ec2 describe-instances \
+  --filters "Name=tag:Name,Values=BastionHost" "Name=instance-state-name,Values=running" \
+  --query "Reservations[*].Instances[*].PublicIpAddress" \
+  --output text
 ```
 
 * Get private IPs of EC2 instances inside the ASG:
