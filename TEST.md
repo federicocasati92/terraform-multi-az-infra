@@ -84,7 +84,7 @@ ping -c 4 google.com
 * You can verify the load balancer forwards traffic and distributes requests to healthy instances by curling the ALB DNS name:
 
 ```bash
-curl http://<your-alb-dns-name>/
+curl http://my-app-lb/
 ```
 
 * The response should alternate between hostnames of the two EC2 instances behind the load balancer, confirming healthy targets and correct load balancing.
