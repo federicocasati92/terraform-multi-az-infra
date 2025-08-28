@@ -109,6 +109,7 @@ resource "aws_instance" "bastion_host" {
 
 # Autoscaling Group (using Launch Template)
 resource "aws_autoscaling_group" "asg" {
+  name = "ASG-EC2"
   desired_capacity          = 2
   max_size                  = 4
   min_size                  = 2
