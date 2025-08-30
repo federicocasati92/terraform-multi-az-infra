@@ -39,7 +39,7 @@ project-root/
 
 ## Testing and Validation
 
-For detailed testing instructions including SSH access, ALB routing, autoscaling, and RDS connectivity, see [test.md](test.md).  
+For detailed testing instructions including SSH access, ALB routing, autoscaling, and RDS connectivity, see [TEST.md](REST.md).  
 
 ## 📸 Architecture Diagram
 
