@@ -25,7 +25,7 @@ project-root/
   - EC2 Instances (access via Bastion and Load Balancer)
   - RDS (MySQL access restricted to EC2 instances only)
 - **Remote backend**:
-  - S3 bucket with versioning for Terraform state
+  - S3 bucket for Terraform state
   - DynamoDB table for state locking
 - **Application Load Balancer (ALB)** to distribute HTTP traffic
 - **Auto Scaling Group (ASG)** with Launch Template
