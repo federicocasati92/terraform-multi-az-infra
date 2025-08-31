@@ -52,7 +52,7 @@ resource "aws_lb_listener" "http" {
 # Key Pair
 resource "aws_key_pair" "ec2_key" {
   key_name   = "my-ec2-key"
-  public_key = file("/Users/federicocasati/.ssh/my-ec2-key.pub")  # or absolute path  # Make sure this file exists
+  public_key = file("~/.ssh/YOUR_PUBLIC_KEY.pub")  # or absolute path  # Make sure this file exists
 }
 
 output "debug_public_key" {
