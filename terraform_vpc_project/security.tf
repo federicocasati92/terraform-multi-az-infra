@@ -8,7 +8,7 @@ resource "aws_security_group" "bastion_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["87.5.147.15/32"]  # Replace with your public IP
+    cidr_blocks = ["YOUR.PUBLIC.IP/32"]  # Replace with your public IP
   } 
 
   # Rule to allow ping (ICMP Echo Request)
