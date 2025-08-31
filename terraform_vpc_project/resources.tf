@@ -56,7 +56,7 @@ resource "aws_key_pair" "ec2_key" {
 }
 
 output "debug_public_key" {
-  value = file("/Users/federicocasati/.ssh/my-ec2-key.pub")
+  value = file("~/.ssh/YOUR_PUBLIC_KEY.pub")
 }
 
 # IAM Role for Bastion Host
