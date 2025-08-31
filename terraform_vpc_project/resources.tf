@@ -199,6 +199,13 @@ resource "aws_cloudwatch_metric_alarm" "low_cpu" {
   }
 }
 
+variable "db_password" {
+  description = "Password for the RDS instance"
+  type        = string
+}
+
+
+
 # RDS Instance
 resource "aws_db_instance" "rds" {
   allocated_storage    = 20
@@ -208,7 +215,7 @@ resource "aws_db_instance" "rds" {
   instance_class       = "db.m5.large"
   db_name              = "mydb"
   username             = "admin"
-  password             = "password"
+  password             = var.db_password
   db_subnet_group_name = aws_db_subnet_group.my_db_subnet_group.name
 
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
